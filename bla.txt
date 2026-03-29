@@ -1,0 +1,220 @@
+Le site devra impérativement contenir les sections suivantes : Accueil Qui sommes-nous Nos missions Nos actions Investissement & infrastructure Nous soutenir Contact 
+
+
+2️⃣ Contenu par section (OBLIGATOIRE) 🔹 Accueil Image bannière principale (diaspora / Afrique / solidarité) Texte de présentation court (issu du paragraphe officiel DAC ci-dessous)
+ Boutons visibles : Qui sommes-nous Nos missions Nos actions Nous soutenir 
+🔹 Qui sommes-nous Présentation complète de la DAC Sous-sections : Historique Valeurs & principes Vision 
+🔹 Nos missions Les missions à afficher sont exclusivement les suivantes : Mobilisation de la diaspora africaine Projets humanitaires et sociaux Formations (audiovisuel, marketing digital, entrepreneuriat) Accompagnement de projets & consulting Sensibilisation (droits humains, femmes, jeunesse) 
+🔹 Nos actions Sections à intégrer : Projets humanitaires Formations & ateliers Événements & conférences Cagnottes solidaires Projets culturels et sociaux 
+🔹 Investissement & infrastructure Axes à présenter : Accompagnement de projets d’investissement Mise en relation diaspora – partenaires Infrastructures sociales et économiques Projets durables en Afrique et en Europe 
+🔹 Nous soutenir Options visibles : Faire un don Participer à une cagnotte Devenir partenaire Devenir membre / bénévole 
+🔹 Contact Formulaire de contact Adresse e-mail Liens réseaux sociaux 
+
+
+
+3️⃣ Images – Instructions strictes Images sobres, professionnelles et représentatives : Diaspora africaine Solidarité Formation Développement Aucune image politique Aucune image choquante Aucune image hors sujet 
+
+
+
+4️⃣ Texte officiel DAC (À UTILISER TEL QUEL) La DAC – Diaspora Afrique Congo est une structure apolitique basée en Europe, créée pour mobiliser, accompagner et structurer les initiatives portées par la diaspora africaine, en particulier congolaise. Son objectif est de connecter la diaspora aux opportunités sociales, humanitaires, culturelles et économiques, tout en favorisant des projets durables et responsables. La DAC agit à travers des actions concrètes : formations, projets humanitaires, accompagnement entrepreneurial, consulting, sensibilisation et mise en relation avec des partenaires adaptés. Sa mission est de transformer l’engagement de la diaspora en impact réel, en Europe comme en Afrique.
+
+numero de la coordinatrice
+rue des guillemins 139 4000 liege
+tik tok et insta et bientôt facebook --- je dois mettre ca avec les liens 
+
+---------------------------------------------------------
+cagnotte soit humanitaire ou soit accompagnement de projet 
+
+nous soutenir
+petit message
+puis faire le versement 
+enlever les photos de nos actions
+dans nos missions afficher les différents tarifs pour les formations audio visuel marketing  ??? les différents tarifs ,,, pas recu 
+
+
+
+
+
+pour action la page = 
+{/* How we act */}
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                t: "Identifier",
+                d: "On recense des besoins réels avec nos relais et partenaires.",
+              },
+              {
+                t: "Mobiliser",
+                d: "Diaspora, bénévoles et ressources : on met tout en mouvement.",
+              },
+              {
+                t: "Agir",
+                d: "Actions terrain, suivi, transparence et retours d’impact.",
+              },
+            ].map((b, i) => (
+              <motion.div
+                key={b.t}
+                variants={fade}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                custom={i}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              >
+                <div className="text-sm font-semibold text-blue-700">
+                  Étape {i + 1}
+                </div>
+                <h4 className="mt-1 text-base font-extrabold text-slate-900">
+                  {b.t}
+                </h4>
+                <p className="mt-2 text-sm text-slate-600">{b.d}</p>
+              </motion.div>
+            ))}
+          </div>
+
+
+
+mon nouveau footer:  <footer className="border-t border-slate-200 bg-white">
+      <div className="mx-auto max-w-6xl px-4 py-10">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <div className="font-semibold">DAC — Diaspora Afrique Congo</div>
+            <div className="mt-1 text-sm text-slate-600"> ⌂ Rue des Guillemins 139 400 Liège, Belgique  </div>
+          <div className="mt-1 text-sm text-slate-600">
+            ✉ <a href="mailto:D.action@outlook.com" className="hover:underline">
+              D.action@outlook.com
+            </a>
+          </div>
+            <div className="mt-1 text-sm text-slate-600">
+            ☎ <a href="tel:+32XXXXXXXX" className="hover:underline">
+              +32 XXX XX XX XX
+            </a>
+          </div>
+           <div className="mt-1 text-sm text-slate-600">Social: Instagram • Facebook • LinkedIn</div>
+
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <Link className="text-sm font-semibold text-slate-700 hover:text-slate-900" href="/about">
+              About
+            </Link>
+            <Link className="text-sm font-semibold text-slate-700 hover:text-slate-900" href="/missions">
+              Missions
+            </Link>
+            <Link className="text-sm font-semibold text-slate-700 hover:text-slate-900" href="/actions">
+              Actions
+            </Link>
+            <Link className="text-sm font-semibold text-slate-700 hover:text-slate-900" href="/contact">
+              Contact
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-8 text-xs text-slate-500">© {new Date().getFullYear()} DAC. All rights reserved.</div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+support-section : 
+
+"use client";
+
+import Link from "next/link";
+import { HeartHandshake, Target } from "lucide-react";
+
+export default function SupportSection() {
+  return (
+    <section className="bg-gradient-to-b from-slate-50 to-white">
+      <div className="mx-auto max-w-6xl px-4 py-14">
+        {/* Header */}
+        <div className="text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Nous soutenir
+          </h1>
+          <p className="mt-3 text-lg font-semibold text-slate-700">
+            Contribuez à notre mission solidaire.
+          </p>
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+            Deux façons de participer : faire un don humanitaire ou accompagner
+            un projet.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          {/* Don */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="h-11 w-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 text-xl">
+            <div className="h-11 w-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+              <HeartHandshake size={20} />
+</div>
+              </div>
+
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-slate-900">Faire un don</h2>
+                <p className="mt-2 text-sm text-slate-600">
+                  Soutenez nos actions solidaires et humanitaires sur le terrain.
+                </p>
+
+                <div className="mt-6">
+                  <Link
+                    href="/donations/don"
+                    className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700"
+                  >
+                    Faire un don
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Projet */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="h-11 w-11 rounded-xl bg-slate-50 flex items-center justify-center text-slate-800 text-xl">
+                <Target size={20} />
+              </div>
+
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-slate-900">
+                  Accompagner un projet
+                </h2>
+                <p className="mt-2 text-sm text-slate-600">
+                  Participez au financement et au développement d’une initiative.
+                </p>
+
+                <div className="mt-6">
+                  <Link
+                    href="/donations/projets"
+                    className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+                  >
+                    Soutenir un projet
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Small note */}
+        <p className="mt-8 text-center text-xs text-slate-500">
+          Merci pour votre soutien — chaque contribution compte.
+        </p>
+      </div>
+    </section>
+  );
+}
