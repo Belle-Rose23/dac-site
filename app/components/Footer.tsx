@@ -26,8 +26,8 @@ export default function Footer() {
         <div>⌂ Rue des Guillemins 139, 4000 Liège</div>
 
         <div>
-          ✉ <a href="mailto:D.action@outlook.com" className="hover:underline">
-            D.action@outlook.com
+          ✉ <a href="mailto:dac.europe.c@gmail.com" className="hover:underline">
+            dac.europe.c@gmail.com
           </a>
         </div>
 
